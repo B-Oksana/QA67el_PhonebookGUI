@@ -8,21 +8,29 @@ public class DeleteContactTests extends TestBase{
 
     @BeforeMethod
     public void precondition(){
-        clickOnLoginLink();
-        fillLoginRegisterForm(new User("kristitomash001@gmail.com", "Aa12345!"));
-        clickOnLoginButton();
+        app.clickOnLoginLink();
+        app.fillLoginRegisterForm(new User()
+                .setEmail("kristitomash001@gmail.com")
+                .setPassword("Aa12345!"));
+        app.clickOnLoginButton();
 
-        clickOnAddLink();
-        fillContactForm("Oliver", "Koen", "1234567890", "test@gmail.com", "TelAviv", "QA");
-        clickOnSaveButton();
+        app.clickOnAddLink();
+        app.fillContactForm(new Contact()
+                .setName("Oliver")
+                .setLastName("Koen")
+                .setPhone("1234567890")
+                .setEmail("test@gmail.com")
+                .setAddress("TelAviv")
+                .setDescription("QA"));
+        app.clickOnSaveButton();
     }
     @Test
     public void deleteContactTest(){
-        int sizeBefore = sizeOfContacts();
+        int sizeBefore = app.sizeOfContacts();
 
-        removeContact();
-        pause(1000);
-        int sizeAfter = sizeOfContacts();
+        app.removeContact();
+        app.pause(1000);
+        int sizeAfter = app.sizeOfContacts();
         Assert.assertEquals(sizeAfter,sizeBefore-1);
 
     }
