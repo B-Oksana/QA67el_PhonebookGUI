@@ -1,5 +1,7 @@
 package com.phonebook.tests;
 
+import com.phonebook.data.UserData;
+import com.phonebook.models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

@@ -1,4 +1,4 @@
-package com.phonebook.tests;
+package com.phonebook.core;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class BaseHelper {
-    WebDriver driver;
+    protected WebDriver driver;
 
     public BaseHelper(WebDriver driver) {
         this.driver = driver;
