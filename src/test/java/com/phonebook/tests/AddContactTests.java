@@ -8,7 +8,16 @@ import com.phonebook.models.User;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class AddContactTests extends TestBase {
 
@@ -23,19 +32,13 @@ public class AddContactTests extends TestBase {
                 .setPassword(UserData.password));
         app.getUser().clickOnLoginButton();
     }
-    @Test
-    public void addContactPositiveTest(){
+    @Test(dataProvider = "addNewContactFromCsv")
+    public void addContactPositiveTest(Contact contact){
           
         app.getContact().clickOnAddLink();
-        app.getContact().fillContactForm(new Contact()
-                .setName(ContactData.name)
-                .setLastName(ContactData.lastName)
-                .setPhone(ContactData.phone)
-                .setEmail(ContactData.email)
-                .setAddress(ContactData.address)
-                .setDescription(ContactData.description));
+        app.getContact().fillContactForm(contact);
         app.getContact().clickOnSaveButton();
-        Assert.assertTrue(app.getContact().isContactCreatedByText(ContactData.name));
+        Assert.assertTrue(app.getContact().verifyByNamePhone(contact.getPhone()));
 
     }
 
@@ -44,4 +47,28 @@ public class AddContactTests extends TestBase {
         app.getContact().removeContact();
     }
 
+    @DataProvider
+    public Iterator<Object[]> addNewContactFromCsv() throws IOException {
+        List<Object[]> list = new ArrayList<>();
+        BufferedReader reader = new BufferedReader
+                (new FileReader(new File("src/test/resources/data321.csv")));
+
+        String line = reader.readLine();
+
+        while (line!=null){
+            String[] split = line.split(",");
+            list.add(new Object[]{new Contact()
+                    .setName(split[0])
+                    .setLastName(split[1])
+                    .setPhone(split[2])
+                    .setEmail(split[3])
+                    .setAddress(split[4])
+                    .setDescription(split[5])});
+
+            line = reader.readLine();
+        }
+        return list.iterator();
+    }
+
 }
+
