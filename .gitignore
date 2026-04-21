@@ -1,5 +1,5 @@
 .gradle
-build/
+
 /gradle/
 
 ### IntelliJ IDEA ###
@@ -18,5 +18,3 @@ gradlew.bat
 *.png
 
 
-### Mac OS ###
-.DS_Store
