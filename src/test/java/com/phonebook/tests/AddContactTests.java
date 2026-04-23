@@ -31,7 +31,6 @@ public class AddContactTests extends TestBase {
         app.getContact().fillContactForm(contact);
         app.getContact().clickOnSaveButton();
         Assert.assertTrue(app.getContact().verifyByNamePhone(contact.getPhone()));
-
     }
 
     @AfterMethod
