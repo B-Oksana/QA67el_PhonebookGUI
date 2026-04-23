@@ -45,6 +45,7 @@ def registerTask(String taskName,String suitePath){
             systemProperty'browser',"${browser}"
         }
     }
+
 }
 registerTask('quick','src/test/resources/testng.xml')
 registerTask('regression','src/test/resources/regression.xml')
