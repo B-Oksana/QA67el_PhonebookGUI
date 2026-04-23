@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - Class com.phonebook.tests.LoginTests</title>
+<title>Test results - Class com.phonebook.tests.HomePageTests</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>Class com.phonebook.tests.LoginTests</h1>
+<h1>Class com.phonebook.tests.HomePageTests</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/com.phonebook.tests.html">com.phonebook.tests</a> &gt; LoginTests</div>
+<a href="../packages/com.phonebook.tests.html">com.phonebook.tests</a> &gt; HomePageTests</div>
 <div id="summary">
 <table>
 <tr>
@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">3</div>
+<div class="counter">2</div>
 <p>tests</p>
 </div>
 </td>
@@ -35,13 +35,13 @@
 </td>
 <td>
 <div class="infoBox" id="ignored">
-<div class="counter">2</div>
+<div class="counter">1</div>
 <p>ignored</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.004s</div>
+<div class="counter">0.002s</div>
 <p>duration</p>
 </div>
 </td>
@@ -80,7 +80,7 @@
 Build info: version: '4.41.0', revision: '9fc754f'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [bc5e13bf9aa3186105d93cf72e68ae55, findElements {value=[href='/login'], using=css selector}]
+Command: [bc5e13bf9aa3186105d93cf72e68ae55, findElements {value=//div[2]//h1, using=xpath}]
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60700}, goog:processID: 22852, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60700/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
 Session ID: bc5e13bf9aa3186105d93cf72e68ae55
 	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
@@ -95,8 +95,8 @@ Session ID: bc5e13bf9aa3186105d93cf72e68ae55
 	at app//org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:440)
 	at app//org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:434)
 	at app//com.phonebook.core.BaseHelper.isElementPresent(BaseHelper.java:20)
-	at app//com.phonebook.fw.UserHelper.isLoginLinkPresent(UserHelper.java:36)
-	at app//com.phonebook.tests.LoginTests.ensurePrecondition(LoginTests.java:15)
+	at app//com.phonebook.fw.HomePageHelper.isHomeComponentPresent(HomePageHelper.java:14)
+	at app//com.phonebook.tests.HomePageTests.ensurePrecondition(HomePageTests.java:11)
 	at java.base@21.0.10/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base@21.0.10/java.lang.reflect.Method.invoke(Method.java:580)
 	at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -159,16 +159,11 @@ Session ID: bc5e13bf9aa3186105d93cf72e68ae55
 </thead>
 <tr>
 <td class="failures">ensurePrecondition</td>
-<td class="failures">0.004s</td>
+<td class="failures">0.002s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
-<td class="skipped">loginNegativeWithoutEmailTest</td>
-<td class="skipped">-</td>
-<td class="skipped">ignored</td>
-</tr>
-<tr>
-<td class="skipped">loginPositiveTest</td>
+<td class="skipped">isHomeComponentPresentTest</td>
 <td class="skipped">-</td>
 <td class="skipped">ignored</td>
 </tr>
@@ -177,7 +172,7 @@ Session ID: bc5e13bf9aa3186105d93cf72e68ae55
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>20:46:08.913 [Test worker] INFO  com.phonebook.core.TestBase -- Start test loginNegativeWithoutEmailTest with data: []
+<pre>20:46:08.909 [Test worker] INFO  com.phonebook.core.TestBase -- Start test isHomeComponentPresentTest with data: []
 </pre>
 </span>
 </div>

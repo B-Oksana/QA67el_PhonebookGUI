@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.phonebook.tests.AddContactNegativeTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-04-23T18:46:05" hostname="KATANA17" time="1.709">
+  <properties/>
+  <testcase name="addContactWithInvalidPhoneTest" classname="com.phonebook.tests.AddContactNegativeTests" time="1.709"/>
+  <system-out><![CDATA[20:46:05.365 [Test worker] INFO  com.phonebook.core.TestBase -- Start test addContactWithInvalidPhoneTest with data: []
+20:46:07.341 [Test worker] INFO  com.phonebook.core.TestBase -- PASSED: addContactWithInvalidPhoneTest
+20:46:07.341 [Test worker] INFO  com.phonebook.core.TestBase -- Stop test
+20:46:07.342 [Test worker] INFO  com.phonebook.core.TestBase -- **************************
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

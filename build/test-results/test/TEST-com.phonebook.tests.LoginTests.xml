@@ -1,16 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.phonebook.tests.LoginTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-04-21T17:59:41" hostname="KATANA17" time="1.848">
+<testsuite name="com.phonebook.tests.LoginTests" tests="3" skipped="2" failures="1" errors="0" timestamp="2026-04-23T18:46:08" hostname="KATANA17" time="0.006">
   <properties/>
-  <testcase name="loginNegativeWithoutEmailTest" classname="com.phonebook.tests.LoginTests" time="1.249"/>
-  <testcase name="loginPositiveTest" classname="com.phonebook.tests.LoginTests" time="0.547"/>
-  <system-out><![CDATA[19:59:41.297 [Test worker] INFO  com.phonebook.core.TestBase -- Start test loginNegativeWithoutEmailTest with data: []
-19:59:42.566 [Test worker] INFO  com.phonebook.core.TestBase -- PASSED: loginNegativeWithoutEmailTest
-19:59:42.568 [Test worker] INFO  com.phonebook.core.TestBase -- Stop test
-19:59:42.572 [Test worker] INFO  com.phonebook.core.TestBase -- **************************
-19:59:42.583 [Test worker] INFO  com.phonebook.core.TestBase -- Start test loginPositiveTest with data: []
-19:59:43.156 [Test worker] INFO  com.phonebook.core.TestBase -- PASSED: loginPositiveTest
-19:59:43.156 [Test worker] INFO  com.phonebook.core.TestBase -- Stop test
-19:59:43.157 [Test worker] INFO  com.phonebook.core.TestBase -- **************************
+  <testcase name="ensurePrecondition" classname="com.phonebook.tests.LoginTests" time="0.004">
+    <failure message="org.openqa.selenium.NoSuchSessionException: invalid session id&#10;Build info: version: '4.41.0', revision: '9fc754f'&#10;System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [bc5e13bf9aa3186105d93cf72e68ae55, findElements {value=[href='/login'], using=css selector}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60700}, goog:processID: 22852, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60700/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: bc5e13bf9aa3186105d93cf72e68ae55" type="org.openqa.selenium.NoSuchSessionException">org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [bc5e13bf9aa3186105d93cf72e68ae55, findElements {value=[href='/login'], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60700}, goog:processID: 22852, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60700/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: bc5e13bf9aa3186105d93cf72e68ae55
+	at app//org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:183)
+	at app//org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:104)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:440)
+	at app//org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:434)
+	at app//com.phonebook.core.BaseHelper.isElementPresent(BaseHelper.java:20)
+	at app//com.phonebook.fw.UserHelper.isLoginLinkPresent(UserHelper.java:36)
+	at app//com.phonebook.tests.LoginTests.ensurePrecondition(LoginTests.java:15)
+	at java.base@21.0.10/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.10/java.lang.reflect.Method.invoke(Method.java:580)
+	at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at app//org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at app//org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at app//org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:846)
+	at app//org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:611)
+	at app//org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at app//org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at app//org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at app//org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at app//org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at app//org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base@21.0.10/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at app//org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at app//org.testng.TestRunner.run(TestRunner.java:616)
+	at app//org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at app//org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at app//org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at app//org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at app//org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at app//org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at app//org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at app//org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at app//org.testng.TestNG.runSuites(TestNG.java:1112)
+	at app//org.testng.TestNG.run(TestNG.java:1079)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:153)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:95)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:63)
+	at java.base@21.0.10/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.10/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:92)
+	at jdk.proxy1/jdk.proxy1.$Proxy4.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:200)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:132)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:103)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:63)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:121)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+</failure>
+  </testcase>
+  <testcase name="loginNegativeWithoutEmailTest" classname="com.phonebook.tests.LoginTests" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="loginPositiveTest" classname="com.phonebook.tests.LoginTests" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[20:46:08.913 [Test worker] INFO  com.phonebook.core.TestBase -- Start test loginNegativeWithoutEmailTest with data: []
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
